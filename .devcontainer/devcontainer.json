@@ -1,6 +1,16 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/codespaces-linux
 {
+	{
+    "image": "ghcr.io/markpatterson27/codespaces-vnc-image:universal",
+    "forwardPorts": [6080],
+    "portsAttributes": {
+        "6080": {
+            "label": "noVNC Viewer",
+            "onAutoForward": "openBrowser"
+        }
+    }
+}
 	"name": "GitHub Codespaces (Default) with VNC virtual desktop",
 	"image": "ghcr.io/markpatterson27/codespaces-vnc-image:universal",
 
